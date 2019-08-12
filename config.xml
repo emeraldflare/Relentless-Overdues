@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Relentless Overdues</Name>
+  <Author>Andrew Morgan</Author>
+  <Version>1.0.07</Version>
+  <Active>True</Active>
+  <Type>Server</Type>
+  <Description>Continues to send overdue notices to patrons after the third overdue notice. The days and time the e-mails are sent are specified in the settings.</Description>
+  <Forms />
+  <Settings>
+    <Setting name="EmailName" value="LongOverdue" type="string">
+      <Description>Name of the e-mail template to use.</Description>
+    </Setting>
+    <Setting name="StartDay" value="21" type="string">
+      <Description>Number of days an item has to be overdue before these e-mails begin to be sent.</Description>
+    </Setting>
+    <Setting name="Time" value="0800" type="string">
+      <Description>Time e-mails are sent. 24-hour format: for example, 1:15PM would be 1315. 8:00AM would be 0800.</Description>
+    </Setting>
+    <Setting name="Interval" value="Monday" type="string">
+      <Description>Day(s) e-mails are sent. Format is a day of the week (Monday, Tuesday, etc.).</Description>
+    </Setting>
+    <Setting name="Exclusions" value="" type="string">
+      <Description>NVTGCs to exclude from Relentless Overdues. Enclose in single quotes, and separate multiple NVTGCs with commas. Example: 'ex1', 'ex2', 'ex3'</Description>
+    </Setting>
+  </Settings>
+  <Files>
+    <File>Relentless Overdues.lua</File>
+  </Files>
+</Configuration>
